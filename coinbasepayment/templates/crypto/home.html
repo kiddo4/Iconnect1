@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  </head>
+  <body>
+   <!-- <div class="contamt-5">-->
+      <div class="card"style="width :fillrem;">
+        <!-- Coinbase checkout details -->
+        <div class="card-body">
+          <h5 class="card-title">{{ checkout.name }}</h5>
+          <p class="card-text">
+            {{ checkout.description }}<br>
+            {{ checkout.local_price.amount }} {{ checkout.local_price.currency }}
+          </p>
+          <a
+    class="btn btn-success"
+    {% if user.is_authenticated %}data-custom="{{ user.pk }}"{% endif %}
+    href="{{ checkout_link }}"
+  >DONATE NOW</a>
+  <!-- Coinbase embedded approach (script required) -->
+  <div class="mt-2">
+    <!--<a
+      class="btn btn-outline-success "
+      {% if user.is_authenticated %}data-custom="{{ user.pk }}"{% endif %}
+      href="{{ checkout_link }}"
+    >DONATE NOW</a>-->
+    <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
+  </div>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+  <!-- Coinbase hosted approach (script not required) -->
+  
+  </body>
+</html>
+{% endblock %}

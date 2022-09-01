@@ -1,0 +1,100 @@
+
+{% load static %}
+
+<html>
+<head>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="{% static 'ideablog/main.css' %}" type="text/css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  {% if title %}
+    <title>ICONNECT- {{ title }}</title>
+  {% else %}
+  <title> ICONNECT </title>
+  {% endif %}
+  </head>
+  <body>
+    
+
+<div class="card text-bg-dark text-light  " style="width: fillrem;" id="welcometxt"
+>
+  <img src="{% static 'images/hey.jpeg' %}" class="card-img" alt="..." height="2000px">
+  <div class="card-img-overlay">
+    <h1 class="card-title middle"><strong>ICONNECT</h1></strong>
+
+<p class="card-text">
+  <h1 class="header1"><strong>A COMMUNITY FOR</strong>
+</h1>
+<h1 class="header2"><strong>CONNECTIONS</strong> </h1>
+  <p class="p-text">This is a platform that <p class="p-text">ensures the connection of ideal thinkers to investors and partners</p></p>
+
+<p class="p-text">Its a medium that ensures idea safety for young and under equipped 
+individuals</p>
+
+<p class="p-text">with bright ideas but have no resources to bring their idea to reality.</p>
+
+
+
+<p class="p-text">Each idea is an asset to the owner and can be of great value to the owner, connect today join the world of connection 
+</p>
+  <a href="{% url 'register' %}" class="btn btn-outline-success btn-lg" id="btn1"><strong>JOIN TODAY</strong>
+    </a>
+   <div class="card text-center text-light" style="width: 57rem; " id="card2">
+                   <img src="{% static 'images/img1.jpg' %}" class="card-img" alt="logo" height="800">
+         <div class="card-img-overlay">
+           <h5 class="card-title"id="header3">Creative Ideas</h5>
+           <h1 class="header2"><strong>FROM IDEAL AND CREATIVE THINKERS</strong></h1>
+         
+         </div>
+
+       </div>
+
+  </div>
+</div>
+
+<h1 class="investorshead text-primary"><strong> ARE YOU LOOKING FOR GREAT IDEAS TO INVEST IN ?</strong></h1>
+<p class="p-text2">Here is the best platform to get best ideas to invest in don't waste your time searching further anymore. Behind every sucessful startup there is a great idea, Invest in great startup ideas from ideal thinkers, help startups to build and join in improving the global community🌍 by investing in ideas  that will generate good income and help the global community🌍, invest in ideas you believe in today.
+<a href="{% url 'blog-home' %}">connect to great ideas today</a>
+</p>
+  <a href="{% url 'blog-home' %}" class="btn btn-outline-success btn-lg" id="btn1"><strong>EXPLORE IDEAS</strong>
+    </a>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,192L48,176C96,160,192,128,288,144C384,160,480,224,576,250.7C672,277,768,267,864,250.7C960,235,1056,213,1152,170.7C1248,128,1344,64,1392,32L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+<div class="container1">
+<h1 class="investorshead2 text-primary">ARE YOU IN SEARCH OF INVESTORS?</h1>
+<p class="p-text3"><strong> You have got this great startup idea but you don't have funds💵
+to push it futher welcome to the world🌍 of connection where investors are been connected to ideal thinkers. Your ideas can connect you to investors today at no cost, fetch funds for your startup ideas by posting your ideas and let investors connect to you
+  <a href="{% url 'register' %}" class="p-text3">Join the community today.</a>
+  </strong>
+</p>
+  <a href="{% url 'register' %}" class="btn btn-outline-success btn-lg" id="btn1"><strong>JOIN TODAY</strong>
+    </a>
+</div>
+
+
+   <div class="card text-center text-black" style="width: fillrem; " id="card">
+                   <img src="{% static 'images/img2.jpg' %}" class="card-img-top" alt="logo">
+         <div class="card-body">
+           <h5 class="card-title"><a href="{% url 'donate'%}">DONATE TO THE COMMUNITY</a>
+           </h5>
+           <h1 class="header2"><a href="{% url 'donate'%}"><strong>little drop of water 💧 makes the ocean, give us some seed funding please help the community improve🤥😑</strong></h1></a>
+ <a href="{% url 'donate' %}" class="btn btn-lg btn-outline-success" id="btn1"><strong>DONATE</srong></a>
+         </div>
+
+<div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a href="{% url 't&c' %}">Terms and conditions</a>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a>
+            <p class="copyright"><strong>THE TEAMS🏢© 2022|All right reserved</strong></p>
+        </footer>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

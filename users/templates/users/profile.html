@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block page_content %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  </head>
+<div class="content-section">
+  <div class="media">
+    <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" alt="" />
+  <div class="media-body">
+  <h2 class="account-heading">{{ user.username }}</h2>
+<p class="text-secondary">{{ user.email }}</p>
+<p class="text-secondary"> Connection Link:{{ user.author.profile.SocialLink }}</p>
+</div>
+</div>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset class="form-group">
+      <legend class="border-bottom mb-4"> Profile Info</legend>
+      {{ u_form|crispy }}
+      {{ p_form|crispy }}
+      <h6 class=" text-danger ">People connect with you via your social link please provide a valid social link eg http://instagram.com/uknown_technology</h6>
+    </fieldset>
+    <div class="form-group">
+      <button class="btn btn-outline-success" type="submit">Update</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
